@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@font-face {
+  font-family: gasper;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/gasper_font/Gaspar_Regular_Italic.otf") format("otf");
+}
+
+@theme {
+  --breakpoint-xs: 26rem; /* 420px */
+}
+
+.pricingSwiper .swiper-wrapper {
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.pricingSwiper .swiper-wrapper .swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+}
+.pricingSwiper .swiper-pagination-bullet-active {
+  background-color: #e63946;
+  width: 30px;
+  height: 8px;
+  border-radius: 50px;
+}
+
+@media (max-width: 420px) {
+  .pricingSwiper .swiper-wrapper .swiper-slide-active > div {
+    box-shadow: 0 2px 2px 0 #78716c;
+    scale: 1;
+  }
+}
+/*  */
+.customerSwiper .swiper-wrapper {
+  position: relative;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.customerSwiper .swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.customerSwiper .swiper-pagination-bullet-active {
+  background-color: #e63946;
+  width: 30px;
+  height: 8px;
+  border-radius: 50px;
+}
+.customerSwiper .swiper-button-prev {
+  background-color: #e63946; /* a richer red */
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Positioning */
+  --swiper-navigation-top-offset: auto;
+  top: auto;
+  bottom: 3px;
+  right: 60px !important;
+  left: auto !important;
+  transform: none;
+}
+
+/* Hover effect */
+.customerSwiper .swiper-button-prev:hover {
+  background-color: #d62828;
+  transform: scale(1.1);
+}
+.customerSwiper .swiper-button-next {
+  background-color: #e63946; /* a richer red */
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Positioning */
+  --swiper-navigation-top-offset: auto;
+  top: auto;
+  bottom: 3px;
+  right: 15px !important;
+  transform: none;
+}
+
+/* Hover effect */
+.customerSwiper .swiper-button-next:hover {
+  background-color: #d62828;
+  transform: scale(1.1);
+}
+/* /////////////////////////////// */
+.passDiv:has(input:not(:placeholder-shown):valid),
+.mailDiv:has(input:not(:placeholder-shown):valid) {
+  border: 2px solid rgb(4, 150, 4);
+}
+
+.passDiv:has(input:not(:placeholder-shown):invalid),
+.mailDiv:has(input:not(:placeholder-shown):invalid) {
+  border: 2px solid red;
+}
+.passDiv:has(input:focus:invalid),
+.mailDiv:has(input:focus:invalid) {
+  border: 2px solid orange;
+}
