@@ -1,11 +1,4 @@
 @import "tailwindcss";
-@font-face {
-  font-family: gasper;
-  font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("/fonts/gasper_font/Gaspar_Regular_Italic.otf") format("otf");
-}
 
 @theme {
   --breakpoint-xs: 26rem; /* 420px */
