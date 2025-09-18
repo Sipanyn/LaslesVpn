@@ -1,4 +1,10 @@
 @import "tailwindcss";
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important; /* Optional: set text color */
+}
 
 @theme {
   --breakpoint-xs: 26rem; /* 420px */
@@ -118,7 +124,4 @@
 .passDiv:has(input:focus:invalid),
 .mailDiv:has(input:focus:invalid) {
   border: 2px solid orange;
-}
-input:valid {
-  background-color: white;
 }
