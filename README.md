@@ -15,12 +15,12 @@ A sleek and modern Vpn website built with Vite.
 - GitHub + Vercel
 ## 🌐 Demo live
 
-you can visit app by clicking link below:
+you can visit web site by clicking link:
 https://lasles-vpn-black-five.vercel.app/
 
 ## 🎨 Design Credit
 Big thanks to [https://www.figma.com/@TreXAgency]
-for this design👇
+for design👇
 (https://www.figma.com/community/file/1201771544232424831/landingpage-vpn) 
 
 ## 📦 Installation 
