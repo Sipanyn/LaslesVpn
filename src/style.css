@@ -119,3 +119,6 @@
 .mailDiv:has(input:focus:invalid) {
   border: 2px solid orange;
 }
+input:valid {
+  background-color: white;
+}

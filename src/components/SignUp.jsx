@@ -69,7 +69,7 @@ function SignUp({ setSignUpOpen, setMObileMenu, setLoginOpen }) {
                 <use href="/sprite.svg#mail_icon" />
               </svg>
               <input
-                className="w-full outline-0 border-0  cursor-pointer text-black bg-white"
+                className="w-full outline-0 border-0   text-black bg-white"
                 type="email"
                 placeholder="Please enter your email"
                 value={email}
@@ -92,7 +92,7 @@ function SignUp({ setSignUpOpen, setMObileMenu, setLoginOpen }) {
                 <use href="/sprite.svg#pass_icon" />
               </svg>
               <input
-                className="w-full outline-0 border-0 cursor-pointer text-black bg-white"
+                className="w-full outline-0 border-0  text-black bg-white"
                 type="password"
                 placeholder="Please enter your password"
                 value={password}
