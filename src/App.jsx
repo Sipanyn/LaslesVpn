@@ -99,7 +99,7 @@ function App() {
               behavior: "smooth",
             })
           }
-          className={` transition-all duration-300 fixed bottom-2.5 right-2.5 cursor-pointer hover:-translate-y-3.5 z-10 rounded-full bg-white shadow-md shadow-black p-3 flex justify-center items-center size-[50px] ${
+          className={` transition-all duration-300 fixed bottom-2.5 right-5 cursor-pointer hover:-translate-y-3.5 z-10 rounded-full bg-white shadow-md shadow-black p-3 flex justify-center items-center size-[50px] ${
             rocket ? "translate-x-[0px]" : "translate-x-[100px]"
           }`}
         >
