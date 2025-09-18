@@ -45,6 +45,7 @@ function SignIn({ setLoginOpen, setMObileMenu, setSignUpOpen }) {
       />
       <div className="w-full h-dvh flex justify-center items-center bg-stone-500/80  pr-2.5 pl-2.5 backdrop-blur-sm">
         <form
+          noValidate
           onSubmit={handleLogIn}
           className="flex flex-col rounded-md bg-white p-3 pb-10 w-full sm:max-w-[500px]"
         >
