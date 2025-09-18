@@ -99,8 +99,8 @@ function App() {
               behavior: "smooth",
             })
           }
-          className={` transition-all duration-300 fixed bottom-2.5 right-5 cursor-pointer hover:-translate-y-3.5 z-10 rounded-full bg-white shadow-md shadow-black p-3 flex justify-center items-center size-[50px] ${
-            rocket ? "translate-x-[0px]" : "translate-x-[100px]"
+          className={` transition-all duration-200 fixed bottom-2.5 right-5 cursor-pointer  z-10 rounded-full bg-white shadow-md shadow-black p-3 flex justify-center items-center size-[50px] ${
+            rocket ? "animate-bounce" : "-translate-y-100 opacity-0"
           }`}
         >
           <img src={rocketimg} alt="" />

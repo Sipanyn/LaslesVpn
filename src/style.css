@@ -125,3 +125,13 @@ input:-webkit-autofill:focus {
 .mailDiv:has(input:focus:invalid) {
   border: 2px solid orange;
 }
+/* //////////////// */
+@keyframes RocketFly {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
