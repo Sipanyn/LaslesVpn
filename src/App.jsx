@@ -11,15 +11,18 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import { AuthProvider } from "./components/AuthContext";
 import SignOut from "./components/SignOut";
+import rocketimg from "/images/rocket-svgrepo-com.png";
 function App() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [signUpOpen, setSignUpOpen] = useState(false);
   const [signOutOpen, setSignOutOpen] = useState(false);
   const [mobileMenu, setMObileMenu] = useState(false);
+  const [rocket, setRocket] = useState(false);
   const featuresRef = useRef(null);
   const customerRef = useRef(null);
   const pricingRef = useRef(null);
   const helpRef = useRef(null);
+
   useEffect(() => {
     if (signUpOpen || loginOpen || signOutOpen) {
       document.body.classList.add("overflow-hidden");
@@ -27,6 +30,22 @@ function App() {
       document.body.classList.remove("overflow-hidden");
     }
   }, [signUpOpen, loginOpen, signOutOpen]);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      console.log("Window scrollTop:", scrollTop);
+      if (scrollTop < 100) {
+        setRocket(false);
+      }
+      if (scrollTop > 100) {
+        setRocket(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <AuthProvider>
@@ -73,6 +92,19 @@ function App() {
         <Location />
         <Customer ref={customerRef} />
         <Footer ref={helpRef} />
+        <div
+          onClick={() =>
+            document.documentElement.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          className={` transition-all duration-300 fixed bottom-2.5 right-2.5 cursor-pointer hover:-translate-y-3.5 z-10 rounded-full bg-white shadow-md shadow-black p-3 flex justify-center items-center size-[50px] ${
+            rocket ? "translate-x-[0px]" : "translate-x-[100px]"
+          }`}
+        >
+          <img src={rocketimg} alt="" />
+        </div>
       </div>
     </AuthProvider>
   );

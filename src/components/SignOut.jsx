@@ -9,6 +9,7 @@ function SignOut({ setSignOutOpen }) {
   async function signout() {
     setLoading(true);
     const { error } = await supabase.auth.signOut();
+
     setLoading(false);
     localStorage.clear();
   }
