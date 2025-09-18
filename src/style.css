@@ -126,12 +126,3 @@ input:-webkit-autofill:focus {
   border: 2px solid orange;
 }
 /* //////////////// */
-@keyframes RocketFly {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-}
