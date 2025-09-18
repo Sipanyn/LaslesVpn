@@ -5,13 +5,14 @@ import { AuthContext } from "./AuthContext";
 
 function SignOut({ setSignOutOpen }) {
   const [loading, setLoading] = useState(false);
-  const { user } = useContext(AuthContext);
   async function signout() {
     setLoading(true);
     const { error } = await supabase.auth.signOut();
 
     setLoading(false);
     localStorage.clear();
+    setSignOutOpen(false);
+    console.log("signed out");
   }
   return (
     <>
@@ -28,10 +29,7 @@ function SignOut({ setSignOutOpen }) {
         }}
       />
       <div className="w-full h-dvh flex justify-center items-center bg-stone-500/80  pr-2.5 pl-2.5 backdrop-blur-sm">
-        <form
-          onSubmit={signout}
-          className="flex flex-col rounded-md bg-white p-3 pb-10 w-full sm:max-w-[500px]"
-        >
+        <div className="flex flex-col rounded-md bg-white p-3 pb-10 w-full sm:max-w-[500px]">
           {/* close icon */}
           <div
             onClick={() => setSignOutOpen((pre) => !pre)}
@@ -49,12 +47,12 @@ function SignOut({ setSignOutOpen }) {
           </h3>
 
           <button
-            type="submit"
+            onClick={signout}
             className="rounded-md border-1 border-stone-600 text-white pr-2.5 pl-2.5 pt-1.5 pb-1.5 w-[80%] m-auto text-center hover:shadow-xs shadow-stone-700 bg-stone-500  cursor-pointer transition-all duration-100"
           >
             {loading ? "please wait..." : "Sign out"}
           </button>
-        </form>
+        </div>
       </div>
     </>
   );

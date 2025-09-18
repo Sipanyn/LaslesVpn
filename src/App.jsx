@@ -34,7 +34,7 @@ function App() {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      console.log("Window scrollTop:", scrollTop);
+
       if (scrollTop < 100) {
         setRocket(false);
       }
