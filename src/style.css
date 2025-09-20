@@ -5,6 +5,10 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
   -webkit-text-fill-color: #000 !important; /* Optional: set text color */
 }
+html,
+body {
+  height: 100%;
+}
 
 @theme {
   --breakpoint-xs: 26rem; /* 420px */
@@ -54,6 +58,7 @@ input:-webkit-autofill:focus {
   height: 8px;
   border-radius: 50px;
 }
+
 .customerSwiper .swiper-button-prev {
   background-color: #e63946; /* a richer red */
   width: 25px;
@@ -68,7 +73,6 @@ input:-webkit-autofill:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-
   /* Positioning */
   --swiper-navigation-top-offset: auto;
   top: auto;
@@ -77,12 +81,17 @@ input:-webkit-autofill:focus {
   left: auto !important;
   transform: none;
 }
-
 /* Hover effect */
 .customerSwiper .swiper-button-prev:hover {
   background-color: #d62828;
   transform: scale(1.1);
 }
+@media (max-width: 600px) {
+  .customerSwiper .swiper-button-prev {
+    display: none;
+  }
+}
+
 .customerSwiper .swiper-button-next {
   background-color: #e63946; /* a richer red */
   width: 25px;
@@ -111,6 +120,11 @@ input:-webkit-autofill:focus {
   background-color: #d62828;
   transform: scale(1.1);
 }
+@media (max-width: 600px) {
+  .customerSwiper .swiper-button-next {
+    display: none;
+  }
+}
 /* /////////////////////////////// */
 .passDiv:has(input:not(:placeholder-shown):valid),
 .mailDiv:has(input:not(:placeholder-shown):valid) {
@@ -126,3 +140,7 @@ input:-webkit-autofill:focus {
   border: 2px solid orange;
 }
 /* //////////////// */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}

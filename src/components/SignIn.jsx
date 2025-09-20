@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { supabase } from "../lib/supabaseClient";
 
 function SignIn({ setLoginOpen, setMObileMenu, setSignUpOpen }) {
+  const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -88,14 +89,16 @@ function SignIn({ setLoginOpen, setMObileMenu, setSignUpOpen }) {
             )}
           </div>
           {/* pass div */}
+
           <div className="flex flex-col items-center mb-7">
-            <div className="passDiv flex flex-row gap-1 w-[80%] m-auto border-1 border-slate-300 rounded-md pl-1 text-stone-400 fill-stone-400 cursor-pointer transition-all duration-100">
-              <svg className="size-8 ">
+            <div className="passDiv flex flex-row items-center gap-1 w-[80%] m-auto border border-slate-300 rounded-md pl-1 pr-2 text-stone-400 fill-stone-400 transition-all duration-100">
+              <svg className="size-8">
                 <use href="/sprite.svg#pass_icon" />
               </svg>
+
               <input
-                className="w-full outline-0 border-0  text-black bg-white"
-                type="password"
+                className="w-full outline-0 border-0 text-black bg-white"
+                type={showPassword ? "text" : "password"}
                 placeholder="Please enter your password"
                 value={password}
                 onChange={(e) => {
@@ -104,9 +107,26 @@ function SignIn({ setLoginOpen, setMObileMenu, setSignUpOpen }) {
                 }}
                 minLength={6}
               />
+
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="cursor-pointer text-stone-400 hover:text-stone-600 transition-colors duration-150"
+              >
+                {showPassword ? (
+                  <svg className="size-6 fill-stone-400">
+                    <use href="/sprite.svg#eye_open" />
+                  </svg>
+                ) : (
+                  <svg className="size-6 text-stone-400">
+                    <use href="/sprite.svg#eye_closed" />
+                  </svg>
+                )}
+              </button>
             </div>
+
             {isPassInvalid && (
-              <p className="text-xs text-slate-400 mt-1  w-[80%]">
+              <p className="text-xs text-slate-400 mt-1 w-[80%]">
                 Min password length must be 6
               </p>
             )}

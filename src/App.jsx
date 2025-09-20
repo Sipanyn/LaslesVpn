@@ -49,9 +49,9 @@ function App() {
 
   return (
     <AuthProvider>
-      <div className="flex flex-col">
+      <div className="flex flex-col h-full">
         {(loginOpen || signUpOpen || signOutOpen) && (
-          <div className="fixed top-0 z-10 w-full">
+          <div className="fixed h-full top-0 z-10 w-full">
             {loginOpen && (
               <SignIn
                 setLoginOpen={setLoginOpen}

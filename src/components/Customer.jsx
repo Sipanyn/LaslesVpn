@@ -26,7 +26,7 @@ const Customer = React.forwardRef((props, ref) => {
       <div>
         <Swiper
           slidesPerView={1}
-          spaceBetween={1}
+          spaceBetween={10}
           centeredSlides={true}
           autoplay={{
             delay: 3000,
@@ -34,7 +34,6 @@ const Customer = React.forwardRef((props, ref) => {
           }}
           loop={true}
           navigation={true}
-          freeMode={true}
           pagination={{
             clickable: true,
           }}
@@ -53,7 +52,7 @@ const Customer = React.forwardRef((props, ref) => {
           className="customerSwiper"
         >
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2  w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user} alt="" />
@@ -79,7 +78,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user2} alt="" />
@@ -105,7 +104,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user3} alt="" />
@@ -131,7 +130,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user4} alt="" />
@@ -157,7 +156,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user5} alt="" />
@@ -183,7 +182,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[310px]  m-auto bg-slate-50">
+            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user6} alt="" />
