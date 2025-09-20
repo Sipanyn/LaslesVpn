@@ -26,12 +26,12 @@ const Customer = React.forwardRef((props, ref) => {
       <div className="flex justify-center w-full">
         <Swiper
           slidesPerView={1}
-          // spaceBetween={1}
+          spaceBetween={1}
           centeredSlides={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           loop={true}
           navigation={true}
           pagination={{
