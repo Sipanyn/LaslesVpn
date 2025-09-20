@@ -23,15 +23,15 @@ const Customer = React.forwardRef((props, ref) => {
         </p>
       </div>
       {/* comments */}
-      <div>
+      <div className="flex justify-center w-full">
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          // spaceBetween={1}
           centeredSlides={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
           loop={true}
           navigation={true}
           pagination={{
@@ -52,7 +52,7 @@ const Customer = React.forwardRef((props, ref) => {
           className="customerSwiper"
         >
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2  w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user} alt="" />
@@ -78,7 +78,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user2} alt="" />
@@ -104,7 +104,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16" src={user3} alt="" />
@@ -130,7 +130,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user4} alt="" />
@@ -156,7 +156,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user5} alt="" />
@@ -182,7 +182,7 @@ const Customer = React.forwardRef((props, ref) => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-col  gap-3 border-1 border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px]  m-auto left-0 right-0 bg-slate-50">
+            <div className="flex flex-col gap-3 border border-slate-200 rounded-md p-2 w-[90%] sm:w-[310px] bg-slate-50">
               {/* info */}
               <div className="flex flex-row justify-between items-center h-fit w-full">
                 <img className="size-16 rounded-full" src={user6} alt="" />
